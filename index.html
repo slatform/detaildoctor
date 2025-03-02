@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Shine Mobile Detailing</title>
+    <title>Detail Doctor - Mobile Detailing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
         body {
-            background: #f5f5f7;
-            color: #1d1d1f;
+            background: #1d1d1f;
+            color: #f5f5f7;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -21,38 +22,40 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 10px 20px;
+            background: rgba(29, 29, 31, 0.95);
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             z-index: 1000;
         }
         nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #007aff;
+            font-size: 26px;
+            font-weight: 700;
+            color: #0071e3;
         }
         nav ul {
             list-style: none;
             display: flex;
         }
         nav ul li {
-            margin: 0 20px;
+            margin: 0 25px;
         }
         nav ul li a {
             text-decoration: none;
-            color: #1d1d1f;
+            color: #f5f5f7;
             font-size: 16px;
+            font-weight: 400;
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #007aff;
+            color: #0071e3;
         }
         .hamburger {
             display: none;
-            font-size: 24px;
+            font-size: 28px;
+            color: #f5f5f7;
             cursor: pointer;
         }
         .hero {
@@ -62,29 +65,30 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, #007aff, #00d4ff);
-            color: white;
+            background: linear-gradient(135deg, #1d1d1f, #333);
             position: relative;
             overflow: hidden;
         }
         .hero h1 {
-            font-size: 60px;
+            font-size: 64px;
+            font-weight: 700;
             margin-bottom: 20px;
             animation: fadeIn 1s ease-in;
         }
         .hero p {
             font-size: 24px;
-            max-width: 600px;
+            font-weight: 300;
+            max-width: 700px;
             animation: fadeIn 1.5s ease-in;
         }
         .hero .car {
             position: absolute;
-            bottom: 20px;
-            width: 300px;
-            animation: drift 10s infinite linear;
+            bottom: 30px;
+            width: 350px;
+            animation: drift 12s infinite linear;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
         @keyframes drift {
@@ -92,61 +96,100 @@
             100% { transform: translateX(100vw); }
         }
         .section {
-            padding: 80px 20px;
+            padding: 100px 30px;
             text-align: center;
         }
         .section h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #f5f5f7;
         }
         .cards {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
             flex-wrap: wrap;
         }
         .card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            background: #333;
+            border-radius: 16px;
+            padding: 25px;
+            width: 320px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         }
         .card img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #f5f5f7;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #d1d1d6;
         }
         .testimonials {
-            background: #fff;
-            padding: 80px 20px;
+            background: #292929;
+            padding: 100px 30px;
         }
         .testimonial {
-            max-width: 600px;
-            margin: 20px auto;
+            max-width: 700px;
+            margin: 30px auto;
             font-style: italic;
+            font-weight: 300;
+            color: #d1d1d6;
+        }
+        .testimonial p:last-child {
+            font-weight: 400;
+            color: #f5f5f7;
         }
         footer {
-            background: #1d1d1f;
-            color: white;
-            padding: 40px 20px;
+            background: #000;
+            color: #d1d1d6;
+            padding: 50px 30px;
             text-align: center;
+            font-size: 14px;
         }
         footer a {
-            color: #007aff;
+            color: #0071e3;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #00d4ff;
+        }
+        .cta {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #0071e3;
+            color: #f5f5f7;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 400;
+            transition: background 0.3s;
+        }
+        .cta:hover {
+            background: #005bb5;
         }
         @media (max-width: 768px) {
             nav ul {
                 display: none;
                 position: absolute;
-                top: 60px;
+                top: 70px;
                 left: 0;
                 width: 100%;
-                background: white;
+                background: #1d1d1f;
                 flex-direction: column;
                 padding: 20px 0;
             }
@@ -154,26 +197,32 @@
                 display: flex;
             }
             nav ul li {
-                margin: 10px 0;
+                margin: 15px 0;
             }
             .hamburger {
                 display: block;
             }
             .hero h1 {
-                font-size: 40px;
+                font-size: 48px;
             }
             .hero p {
-                font-size: 18px;
+                font-size: 20px;
             }
             .hero .car {
-                width: 200px;
+                width: 250px;
+            }
+            .section {
+                padding: 60px 20px;
+            }
+            .card {
+                width: 280px;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">Apple Shine Detailing</div>
+        <div class="logo">Detail Doctor</div>
         <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -183,58 +232,58 @@
     </nav>
 
     <section class="hero">
-        <h1>Shine Bright, Wherever You Are</h1>
-        <p>Premium mobile detailing services brought to your doorstep with Apple-inspired perfection.</p>
-        <img src="https://via.placeholder.com/300x150?text=Car" alt="Car" class="car">
+        <h1>Your Car, Our Cure</h1>
+        <p>Expert mobile detailing that restores your vehicle to pristine perfection, wherever you are.</p>
+        <img src="https://via.placeholder.com/350x175?text=Car" alt="Car" class="car">
     </section>
 
     <section class="section">
-        <h2>Why Choose Us?</h2>
+        <h2>Why Detail Doctor?</h2>
         <div class="cards">
             <div class="card">
-                <img src="https://via.placeholder.com/280x180?text=Quality" alt="Quality">
-                <h3>Unmatched Quality</h3>
-                <p>We use top-tier products to make your vehicle sparkle like new.</p>
+                <img src="https://via.placeholder.com/300x180?text=Precision" alt="Precision">
+                <h3>Precision Care</h3>
+                <p>Every detail matters. We treat your car like it’s our own.</p>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/280x180?text=Convenience" alt="Convenience">
-                <h3>Ultimate Convenience</h3>
-                <p>We come to you—home, work, anywhere.</p>
+                <img src="https://via.placeholder.com/300x180?text=Mobile" alt="Mobile">
+                <h3>Mobile Mastery</h3>
+                <p>We bring the shine to you—home, office, anywhere.</p>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/280x180?text=Eco-Friendly" alt="Eco-Friendly">
-                <h3>Eco-Friendly</h3>
-                <p>Sustainable cleaning that’s kind to the planet.</p>
+                <img src="https://via.placeholder.com/300x180?text=Eco" alt="Eco">
+                <h3>Eco-Conscious</h3>
+                <p>Green products for a clean conscience and a spotless ride.</p>
             </div>
         </div>
     </section>
 
     <section class="testimonials">
-        <h2>What Our Customers Say</h2>
+        <h2>Patient Reviews</h2>
         <div class="testimonial">
-            <p>"My car has never looked better! The team was professional and fast."</p>
-            <p><strong>- Sarah M.</strong></p>
+            <p>"Detail Doctor transformed my car. It’s never looked this good!"</p>
+            <p>- Michael T.</p>
         </div>
         <div class="testimonial">
-            <p>"I love that they come to me. It’s detailing made simple."</p>
-            <p><strong>- John D.</strong></p>
+            <p>"The convenience is unreal. They’re my go-to for detailing."</p>
+            <p>- Lisa K.</p>
         </div>
         <div class="testimonial">
-            <p>"Eco-friendly and flawless results. Highly recommend!"</p>
-            <p><strong>- Emily R.</strong></p>
+            <p>"Eco-friendly and flawless. Worth every penny."</p>
+            <p>- James R.</p>
         </div>
     </section>
 
     <section class="section">
-        <h2>Book Your Shine Today</h2>
-        <p>Ready to experience the best in mobile detailing? Contact us now.</p>
-        <a href="contact.html" style="display: inline-block; padding: 10px 20px; background: #007aff; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px;">Get Started</a>
+        <h2>Revive Your Ride</h2>
+        <p>Schedule your appointment today and let Detail Doctor work its magic.</p>
+        <a href="contact.html" class="cta">Book Now</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Apple Shine Mobile Detailing. All rights reserved.</p>
+        <p>© 2025 Detail Doctor Mobile Detailing. All rights reserved.</p>
         <p><a href="services.html">Services</a> | <a href="contact.html">Contact Us</a></p>
-        <p>Phone: (555) 123-4567 | Email: info@appleshine.com</p>
+        <p>Phone: (555) 987-6543 | Email: info@detaildoctor.com</p>
     </footer>
 
     <script>
